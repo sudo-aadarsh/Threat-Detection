@@ -1,0 +1,13 @@
+version: '3.8'
+
+services:
+  cybersec-agents:
+    build: .
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    environment:
+      - PYTHONUNBUFFERED=1
+    env_file:
+      - .env
